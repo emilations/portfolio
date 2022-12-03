@@ -1,7 +1,17 @@
+/* This section covers the header component */
 .Header {
+  position: relative;
+  box-sizing: border-box;
   display: flex;
   color: white;
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 0.7rem 1.5rem 0rem 1.5rem;
+  top: -100px;
+  animation: slide 0.5s forwards;
+  animation-delay: 0.5s;
+  width: 100%;
+  justify-content: space-between;
+  font-family: "Cairo";
+  align-items: center;
 }
 
 .title {
@@ -9,6 +19,7 @@
   gap: 10px;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
+  font-family: "Cairo";
 }
 
 .title--firstname{
@@ -19,3 +30,24 @@
   color: rgb(254, 223, 185);
 }
 
+@keyframes slide {
+  100% { top: 0px; }
+}
+
+.menu > ul { 
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > ul > *:hover {
+  color: rgb(254, 223, 185);
+  transition: all 0.1s ease-in-out;
+  margin-bottom: -1px;
+  border-bottom: 1px solid rgb(254, 223, 185);
+  -webkit-transition: all 0.12s ease-in-out;
+}
